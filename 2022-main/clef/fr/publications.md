@@ -1,52 +1,48 @@
-# SimpleText@CLEF-2022 Publications
+# Publications de SimpleText@CLEF-2022
 <p align="center">
 </p>
 
-[Home](./) | [Call for papers](./CFP) | [Important dates](./dates) | [Tasks](./tasks)  | [Tools](./tools) 
-[Program](./program) | [Publications](./publications) | [Organisers](./organisers) | [Contact](./contact) | [CLEF-2023](https://simpletext-project.com/2023/clef)
+Accueil | Appel à contributions | Dates importantes | Tâches | Outils Programme | Publications | Organisateurs | Contact | CLEF-2023
 
 
-<h2 align="center">SimpleText: Automatic Simplification of Scientific Texts</h2>
+<h2 align="center">SimpleText : Simplification automatique des textes scientifiques</h2>
 
-- [_Overview of the CLEF 2022 SimpleText Lab: Automatic Simplification of Scientific Texts_](https://link.springer.com/chapter/10.1007/978-3-031-13643-6_28), Liana Ermakova, Patrice Bellot, Jaap Kamps, Diana Nurbakova, Irina Ovchinnikova, Eric SanJuan, Elise Mathurin, Radia Hannachi, Stéphane Huet, Silvia Araujo [BibTeX](../../BibTeX/ermakova_overview_2022.bib)
+- [_Aperçu du laboratoire SimpleText de CLEF 2022 : Simplification automatique de textes scientifiques, Liana Ermakova, Patrice Bellot, Jaap Kamps, Diana Nurbakova, Irina Ovchinnikova, Eric SanJuan, Elise Mathurin, Radia Hannachi, Stéphane Huet, Silvia Araujo BibTeX
 
-- _Overview of the CLEF 2022 SimpleText_, «&nbsp;Task 1: Passage Selection for a Simplified Summary&nbsp;»  
-Eric Sanjuan, Stéphane Huet, Jaap Kamps, Liana Ermakova [URL](http://ceur-ws.org/Vol-3180/paper-235.pdf)
+- Aperçu de la CLEF 2022 SimpleText, " Tâche 1 : Sélection de passages pour un résumé simplifié "  
+Eric Sanjuan, Stéphane Huet, Jaap Kamps, Liana Ermakova URL
 
-- _Overview of the CLEF 2022 SimpleText_, «&nbsp;Task 2: Complexity Spotting in Scientific Abstracts&nbsp;»  
-Liana Ermakova, Irina Ovchinnikov, Jaap Kamps, Diana Nurbakova, Silvia Araújo, Radia Hannachi [URL](http://ceur-ws.org/Vol-3180/paper-236.pdf)
+- Aperçu de la CLEF 2022 SimpleText, " Tâche 2 : Repérer la complexité dans les résumés scientifiques "  
+Liana Ermakova, Irina Ovchinnikov, Jaap Kamps, Diana Nurbakova, Silvia Araújo, Radia Hannachi URL
 
-- _Overview of the CLEF 2022 SimpleText_, «&nbsp;Task 3: Query Biased Simplification of Scientific Texts&nbsp;»  
-Liana Ermakova, Irina Ovchinnikov, Jaap Kamps, Diana Nurbakova, Silvia Araújo, Radia Hannachi [URL](http://ceur-ws.org/Vol-3180/paper-237.pdf)
+- Aperçu de la CLEF 2022 SimpleText, " Tâche 3 : Simplification biaisée des textes scientifiques par les requêtes "  
+Liana Ermakova, Irina Ovchinnikov, Jaap Kamps, Diana Nurbakova, Silvia Araújo, Radia Hannachi URL
 
-- _Searching for explanation of difficult scientific terms_  
-Majda Ennaciri, <a href="../../BibTeX/ennaciri_searching_2022.bib">BibTeX</a> 
+- _Recherche d'explication de termes scientifiques difficiles_  
+Majda Ennaciri, BibTeX 
 
-- _Assembly Models for SimpleText_, «&nbsp;Task 2: Results from Wuhan University Research Group&nbsp;»  
-Huang Jianfei, Mao Jin, <a href="../../BibTeX/jianfei_assembly_2022.bib">BibTeX</a>
+- Modèles d'assemblage pour SimpleText, " Tâche 2 : Résultats du groupe de recherche de l'université de Wuhan "  
+Huang Jianfei, Mao Jin, BibTeX
 
-- _Controllable Sentence Simplification Using Transfer Learning_  
-Antonio Menta, Ana Garcia-Serrano, <a href="../../BibTeX/menta_controllable_2022.bib">BibTeX</a>
+- _Simplification de phrases contrôlables à l'aide de l'apprentissage par transfert_  
+Antonio Menta, Ana Garcia-Serrano, BibTeX
 
-- _Using a Pre-trained SimpleT5 Model for Text Simplification in a Limited Corpus_  
-José Monteiro, Micaela Aguiar, Sílvia Araújo, <a href="../../BibTeX/monteiro_using_2022.bib">BibTeX</a>
+- _Utilisation d'un modèle SimpleT5 pré-entraîné pour la simplification de textes dans un corpus limité_  
+José Monteiro, Micaela Aguiar, Sílvia Araújo, BibTeX
 
-- _University of Amsterdam at the CLEF 2022 SimpleText Track_  
-Femke Mostert, Ashmita Sampatsing, Mink Spronk, David Rau, Jaap Kamps, <a href="../../BibTeX/mostert_university_2022.bib">BibTeX</a>
+- _L'Université d'Amsterdam à la CLEF 2022 SimpleText Track_  
+Femke Mostert, Ashmita Sampatsing, Mink Spronk, David Rau, Jaap Kamps, BibTeX
 
-- _HULAT-UC3M at SimpleText@CLEF-2022: Scientific text simplification using BART_  
-Adrián Rubio, Paloma Martínez, <a href="../../BibTeX/rubio_hulat-uc3m_2022.bib">BibTeX</a>
+- _HULAT-UC3M à SimpleText@CLEF-2022 : Simplification de textes scientifiques à l'aide de BART_  
+Adrián Rubio, Paloma Martínez, BibTeX
 
-- _NLP-IISERB@Simpletext2022: To Explore the Performance of BM25 and Transformer Based Frameworks for Automatic Simplification of Scientific Texts_  
-Sourav Saha, Dwaipayan Roy, B Yuvaraj Goud, Chethan S Reddy, Tanmay Basu, <a href="../../BibTeX/saha-nlp-iiserbsimpletext2022_2022.bib">BibTeX</a>
+- _NLP-IISERB@Simpletext2022 : Explorer la performance des cadres basés sur la BM25 et les transformateurs pour la simplification automatique des textes scientifiques_  
+Sourav Saha, Dwaipayan Roy, B Yuvaraj Goud, Chethan S Reddy, Tanmay Basu, BibTeX
 
-- _Is Using an AI to Simplify a Scientific Text Really Worth It?_  
-Léa Talec-Bernard <a href="../../BibTeX/talec-bernard_is_2022.bib">BibTeX</a>
+- _L'utilisation d'une IA pour simplifier un texte scientifique en vaut-elle vraiment la peine ?_  
+Léa Talec-Bernard BibTeX
 
-- _CYUT Team2 SimpleText Shared Task Report in CLEF-20222_  
-Shih-Hung Wu, Hong-Yi Huang, <a href="../../BibTeX/wu_cyut_2022.bib">BibTeX</a>
+- _Rapport sur les tâches partagées de CYUT Team2 SimpleText dans CLEF-20222_  
+Shih-Hung Wu, Hong-Yi Huang, BibTeX
 
-- Ermakova, L., Bellot, P., Kamps, J., Nurbakova, D., Ovchinnikova, I., SanJuan, E., Mathurin, E., Araújo, S., Hannachi, R., Huet, S., 
-& Poinsu, N. (2022). *Automatic Simplification of Scientific Texts: SimpleText Lab at CLEF-2022*. In M. Hagen, S. Verberne, C. Macdonald, 
-C. Seifert, K. Balog, K. Nørvåg, & V. Setty (Eds.), Advances in Information Retrieval (Vol. 13186, pp. 364–373). Springer International Publishing. 
-https://doi.org/10.1007/978-3-030-99739-7_46, [BibTeX](../bib/simpletext_ecir_2022.bib)
+- Ermakova, L., Bellot, P., Kamps, J., Nurbakova, D., Ovchinnikova, I., SanJuan, E., Mathurin, E., Araújo, S., Hannachi, R., Huet, S., & Poinsu, N. (2022). *Simplification automatique de textes scientifiques : SimpleText Lab à CLEF-2022. Dans M. Hagen, S. Verberne, C. Macdonald, C. Seifert, K. Balog, K. Nørvåg, & V. Setty (Eds.), Advances in Information Retrieval (Vol. 13186, pp. 364-373). Springer International Publishing. https://doi.org/10.1007/978-3-030-99739-7\_46, BibTeX

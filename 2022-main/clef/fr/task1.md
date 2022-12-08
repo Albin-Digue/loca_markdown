@@ -1,92 +1,74 @@
-# SimpleText@CLEF-2022 Tasks
+# Tâches de SimpleText@CLEF-2022
 
 
-[Home](./) | [Call for papers](./CFP) | [Important dates](./dates) | [Tasks](./tasks)  | [Tools](./tools) 
-[Program](./program) | [Publications](./publications) | [Organisers](./organisers) | [Contact](./contact) | [CLEF-2023](https://simpletext-project.com/2023/clef)
+Accueil | Appel à contributions | Dates importantes | Tâches | Outils Programme | Publications | Organisateurs | Contact | CLEF-2023
 
 
 ---
 
-## SimpleText Task Guidelines
+## Directives pour les tâches SimpleText
 
-We invite you to submit both automatic and manual runs! Manual intervention should be reported.
+Nous vous invitons à soumettre aussi bien des parcours automatiques que manuels ! Les interventions manuelles doivent être signalées.
 
 ---
 
-<button>[Access](./tasks)</button> | <button>[Shared task 1](./task1)</button> | <button>[Shared task 2](./task2)</button> | <button>[Shared task 3](./task3)</button>| <button>[Unshared task 4](./task4)</button>
+Accès | Tâche partagée 1 | Tâche partagée 2 | Tâche partagée 3| Tâche non partagée 4
 
 <br>
 
-## Task 1:  What is in (or out)? Select passages to include in a simplified summary, given a query.
+## Tâche 1 : Qu'est-ce qui est dedans (ou dehors) ? Sélectionner les passages à inclure dans un résumé simplifié, à partir d'une requête.
 
-The task aims at finding references in computer science that could be inserted as citations in original press articles of general audience for illustration, fact checking or actualization. For each of the selected references, more relevant sentences need to be extracted. These passages can be complex and require further simplification to be carried out in tasks 2 and 3. Task 1 focus on content retrieval.
+La tâche vise à trouver des références en informatique qui pourraient être insérées comme citations dans des articles de presse originaux d'audience générale à des fins d'illustration, de vérification des faits ou d'actualisation. Pour chacune des références sélectionnées, des phrases plus pertinentes doivent être extraites. Ces passages peuvent être complexes et nécessitent une simplification supplémentaire à effectuer dans les tâches 2 et 3. La tâche 1 se concentre sur la récupération du contenu.
 
-**Corpus: DBLP + abstracts**
+**Corpus : DBLP + résumés**
 
-We use the Citation Network Dataset: DBLP+Citation, [ACM Citation network](https://www.aminer.org/citation). An ElasticSearch index is provided to participants accessible through a GUI API. A json dump of the index is also available for participants.
+Nous utilisons le Citation Network Dataset : DBLP+Citation, réseau de citations ACM. Un index ElasticSearch est mis à la disposition des participants, accessible via une API GUI. Un dump json de l'index est également disponible pour les participants.
 
-**Topics: Press articles**
+**Sujets : Articles de presse**
 
-Topics are a selection of 40 press article. 20 from a major international newspaper for a general audience and 20 from [Tech Xplore](https://techxplore.com/), enriched with queries manually extracted from the content of the article. It has been checked that at least 5 relevant abstracts can be found for for each query.
+Les sujets sont une sélection de 40 articles de presse. 20 provenant d'un grand journal international grand public et 20 de Tech Xplore, enrichis de requêtes extraites manuellement du contenu de l'article. Il a été vérifié qu'au moins 5 résumés pertinents peuvent être trouvés pour chaque requête.
 
-**Output format:**
+**Format de sortie :**
  
-Results should be provided in a TREC style tabulated format (with a ".csv" extention). The following columns are required (include these as the first line):
+Les résultats doivent être fournis dans un format tabulé de type TREC (avec une extension ".csv"). Les colonnes suivantes sont obligatoires (elles doivent figurer sur la première ligne) :
 
-1. run_id: Run ID starting with teamid, followed by "_task1_" and run_name
-2. manual: Whether the run is manual {0,1}
-3. topic_id: Topic ID
-4. query_id: Query ID used to retrieve the document (if one of the queries provided for the topic was used; 0 otherwise)
-5. doc_id: ID of the retrieved document (to be extracted from the json output)
-6. passage: Text of the selected passage
+1. run\_id : ID de l'exécution commençant par teamid, suivi par "task1" et run\_name
+2. manuel : Si l'exécution est manuelle {0,1}
+3. topic\_id : ID du sujet
+4. query\_id : ID de la requête utilisée pour récupérer le document (si l'une des requêtes fournies pour le sujet a été utilisée ; 0 sinon)
+5. doc\_id : ID du document récupéré (à extraire de la sortie json)
+6. passage : Texte du passage sélectionné
  
-For each topic, the maximum number of distinct DBLP references (_id json field) is 100 and the total length of passages should not exceed 1000 tokens.
+Pour chaque sujet, le nombre maximum de références DBLP distinctes (champ \_id json) est de 100 et la longueur totale des passages ne doit pas dépasser 1000 tokens.
 
-*Output example*:
+Exemple de sortie :
 
-| run_id | manual | topic_id | query_id | doc_id | passage |
-|:-------|:-------|:---------|:-------|:--------|:-----|
-| ST1_task1_1 | 0 | G01 | G01.1 | 1564531496 | A CDA is a mobile user device, similar to a Personal Digital Assistant (PDA). It supports the citizen when dealing with public authorities and proves his rights - if desired, even without revealing his identity. |
-| ST1_task1_1 | 0 | G01 | G01.1 | 3000234933 | People are becoming increasingly comfortable using Digital Assistants (DAs) to interact with services or connected objects |
-| ST1_task1_1 | 0 | G01 | G01.2 | 1448624402 | As extensive experimental research has shown individuals suffer from diverse biases in decision-making. |
+| run\_id | manual | topic\_id | query\_id | doc\_id | passage | |:-------|:-------|:---------|:-------|:--------|:-----| | ST1\_task1\_1 | 0 | G01 | G01.1 | 1564531496 | Un CDA est un appareil mobile pour l'utilisateur, similaire à un assistant numérique personnel (PDA). Il aide le citoyen dans ses relations avec les autorités publiques et prouve ses droits - si on le souhaite, même sans révéler son identité. | ST1\_task1\_1 | 0 | G01 | G01.1 | 3000234933 | Les gens sont de plus en plus à l'aise avec les assistants numériques (AN) pour interagir avec des services ou des objets connectés | | ST1\_task1\_1 | 0 | G01 | G01.2 | 1448624402 | Comme l'ont montré de nombreuses recherches expérimentales, les individus souffrent de divers biais dans la prise de décision. |
 
-*Output format checker*
+*Vérificateur du format de sortie*
 
-You can use this python3 script to check the output format. The script requires Python 3 and the Pandas library:
-[Download python output checker](../check_format.py)
+Vous pouvez utiliser ce script python3 pour vérifier le format de sortie. Le script nécessite Python 3 et la bibliothèque Pandas : [Télécharger python output checker](../check_format.py)
 
-**Disclaimer:** By downloading and using these data, you agree to the terms of use. Any use of the data for any purpose other than academic research, would be in violation of the intended use of these data. 
+**Avis de non-responsabilité :** En téléchargeant et en utilisant ces données, vous acceptez les conditions d'utilisation. Toute utilisation des données à des fins autres que la recherche universitaire constituerait une violation de l'utilisation prévue de ces données. 
 
-Therefore, by downloading and using these data you give the following assurances with respect to the SimpleText data:
-1. You will not use nor permit others to use the data in the SimpleText datasets in any way except for classes and academic research.
-2. You will not at any time disclose, give, or transmit (in any manner or form or for any purpose) the data (or any portion thereof) to any location or person, including but not limiting to making the data available on the Internet, and copying the data onto any cloud-based storage system.
-3. You will not release nor permit others to release the dataset or any part of it to any person. 
+Par conséquent, en téléchargeant et en utilisant ces données, vous donnez les assurances suivantes concernant les données SimpleText : 1\. Vous n'utiliserez ni ne permettrez à d'autres d'utiliser les données des ensembles de données SimpleText de quelque manière que ce soit, sauf pour les cours et la recherche universitaire. 2\. À aucun moment vous ne divulguerez, ne donnerez ou ne transmettrez (de quelque manière, sous quelque forme ou à quelque fin que ce soit) les données (ou toute partie de celles-ci) à quelque endroit ou personne que ce soit, y compris, mais sans s'y limiter, en rendant les données disponibles sur Internet et en copiant les données sur tout système de stockage en nuage. 3\. Vous ne divulguerez pas et ne permettrez pas à d'autres de divulguer l'ensemble de données ou toute partie de celui-ci à quiconque. 
 
-In case of violation of the conditions for access to the data for scientific purposes, this access may be withdrawn from the research entity and/or from the researcher. The research entity may also be liable to pay compensation for damages for third parties or asked to take disciplinary action against the offending researcher. 
+En cas de violation des conditions d'accès aux données à des fins scientifiques, cet accès peut être retiré à l'entité de recherche et/ou au chercheur. L'entité de recherche peut également être tenue de payer des dommages et intérêts à des tiers ou être invitée à prendre des mesures disciplinaires à l'encontre du chercheur fautif. 
 
 
-### Evaluation  
-Sentence pooling and automatic metrics will be used to evaluate these results. The relevance of the source document will be evaluated as well as potential unresolved anaphora issues.
+### Évaluation  
+Le regroupement de phrases et les métriques automatiques seront utilisés pour évaluer ces résultats. La pertinence du document source sera évaluée ainsi que les éventuels problèmes d'anaphore non résolus.
 
-### Result submission:
-Participants should put their run results into the folder Documents created for their user and **submit them by email** to *contact@simpletext-project.com*.
+### Soumission des résultats :
+Les participants doivent placer leurs résultats d'exécution dans le dossier Documents créé pour leur utilisateur et les soumettre par e-mail à contact@simpletext-project.com.
 
-The email subject has to be in the format **\[CLEF TASK 1] TEAM_ID**. 
+Le sujet de l'email doit être dans le format \[CLEF TASK 1] TEAM\_ID. 
 
-Runs should be submitted as a file in a TSV format. 
+Les parcours doivent être soumis sous forme de fichier au format TSV. 
 
-A confirmation email will be sent within 2 days after the submission deadline. 
+Un courriel de confirmation sera envoyé dans les deux jours suivant la date limite de soumission. 
 
-## How to Cite
-If you extend or use this work, please cite the [paper](https://doi.org/10.1007/978-3-031-13643-6_28) where it was introduced:
-```
-Liana Ermakova, Eric SanJuan, Jaap Kamps, Stéphane Huet, Irina Ovchinnikova, Diana Nurbakova, 
-Sílvia Araújo, Radia Hannachi, Elise Mathurin, and Patrice Bellot. 2022. 
-Overview of the CLEF 2022 SimpleText Lab: Automatic Simplification of Scientific Texts. 
-In Experimental IR Meets Multilinguality, Multimodality, and Interaction: 13th International 
-Conference of the CLEF Association, CLEF 2022, Bologna, Italy, September 5–8, 2022, Proceedings. 
-Springer-Verlag, Berlin, Heidelberg, 470–494. https://doi.org/10.1007/978-3-031-13643-6_28
-```
-[Paper](https://doi.org/10.1007/978-3-031-13643-6_28)
+## Comment citer
+Si vous étendez ou utilisez ce travail, veuillez citer l'article où il a été présenté : ``` Liana Ermakova, Eric SanJuan, Jaap Kamps, Stéphane Huet, Irina Ovchinnikova, Diana Nurbakova, Sílvia Araújo, Radia Hannachi, Elise Mathurin et Patrice Bellot. 2022\. Aperçu du laboratoire SimpleText de CLEF 2022 : Simplification automatique de textes scientifiques. In Experimental IR Meets Multilinguality, Multimodality, and Interaction : 13e conférence internationale de l'association CLEF, CLEF 2022, Bologne, Italie, 5-8 septembre 2022, Actes. Springer-Verlag, Berlin, Heidelberg, 470-494\. https://doi.org/10.1007/978-3-031-13643-6\_28 Paper
 
-[Dowload .BIB](../../BibTeX/ermakova_overview_2022.bib)
+[Télécharger le fichier .BIB](../../BibTeX/ermakova_overview_2022.bib)
